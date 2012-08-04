@@ -1,11 +1,11 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	4.8.97
-Release:	1
+Version: 4.9.0
+Release: 1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcharselect
-Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%{name}-%{version}.tar.xz
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 
 %description

@@ -13,7 +13,6 @@ KCharSelect is a tool to select special characters from all installed
 fonts and copy them into the clipboard.
 
 %files
-%{_kde_appsdir}/kconf_update
 %{_kde_appsdir}/kcharselect
 %{_kde_bindir}/kcharselect
 %{_kde_applicationsdir}/KCharSelect.desktop
@@ -34,6 +33,7 @@ fonts and copy them into the clipboard.
 %changelog
 * Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
 - New version 4.10.0
+- Update files
 
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
 - New version 4.9.4

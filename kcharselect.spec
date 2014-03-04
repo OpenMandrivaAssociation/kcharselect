@@ -1,6 +1,6 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	4.12.2
+Version:	4.12.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -31,6 +31,9 @@ fonts and copy them into the clipboard.
 %makeinstall_std -C build
 
 %changelog
+* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.3-1
+- New version 4.12.3
+
 * Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.2-1
 - New version 4.12.2
 

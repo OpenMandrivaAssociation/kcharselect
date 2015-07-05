@@ -5,8 +5,12 @@ Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcharselect
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5XmlGui)
 
 %description
 KCharSelect is a tool to select special characters from all installed

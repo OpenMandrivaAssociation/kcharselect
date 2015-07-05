@@ -17,10 +17,10 @@ KCharSelect is a tool to select special characters from all installed
 fonts and copy them into the clipboard.
 
 %files
-%{_kde_appsdir}/kcharselect
-%{_kde_bindir}/kcharselect
-%{_kde_applicationsdir}/KCharSelect.desktop
-%{_kde_docdir}/HTML/*/kcharselect
+%doc %{_docdir}/HTML/*/kcharselect
+%{_bindir}/kcharselect
+%{_datadir}/applications/org.kde.KCharSelect.desktop
+%{_datadir}kxmlgui5/kcharselect/kcharselectui.rc
 
 #----------------------------------------------------------------------
 

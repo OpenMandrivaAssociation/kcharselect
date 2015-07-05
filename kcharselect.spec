@@ -20,7 +20,7 @@ fonts and copy them into the clipboard.
 %doc %{_docdir}/HTML/*/kcharselect
 %{_bindir}/kcharselect
 %{_datadir}/applications/org.kde.KCharSelect.desktop
-%{_datadir}kxmlgui5/kcharselect/kcharselectui.rc
+%{_datadir}/kxmlgui5/kcharselect/kcharselectui.rc
 
 #----------------------------------------------------------------------
 

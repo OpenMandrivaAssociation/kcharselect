@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kcharselect-15.08.0.tar.xz: 297fcccc803304831d3e7dec41967ed6616735ad
+sources:
+  kcharselect-15.08.1.tar.xz: 90d3edbec7a73371d769193f755b361727efabce

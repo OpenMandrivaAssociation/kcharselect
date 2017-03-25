@@ -1,11 +1,12 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	16.12.2
+Version:	17.03.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcharselect
-Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
@@ -19,7 +20,7 @@ fonts and copy them into the clipboard.
 %files
 %doc %{_docdir}/HTML/*/kcharselect
 %{_bindir}/kcharselect
-%{_datadir}/applications/org.kde.KCharSelect.desktop
+%{_datadir}/applications/org.kde.kcharselect.desktop
 %{_datadir}/kxmlgui5/kcharselect/kcharselectui.rc
 
 #----------------------------------------------------------------------

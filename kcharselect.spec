@@ -1,6 +1,6 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -17,8 +17,7 @@ BuildRequires:	cmake(KF5XmlGui)
 KCharSelect is a tool to select special characters from all installed
 fonts and copy them into the clipboard.
 
-%files
-%doc %{_docdir}/HTML/*/kcharselect
+%files -f %{name}.lang
 %{_bindir}/kcharselect
 %{_datadir}/applications/org.kde.kcharselect.desktop
 %{_datadir}/kxmlgui5/kcharselect/kcharselectui.rc
@@ -34,3 +33,4 @@ fonts and copy them into the clipboard.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html

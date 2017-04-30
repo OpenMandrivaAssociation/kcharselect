@@ -12,6 +12,8 @@ BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5Bookmarks)
+BuildRequires:	cmake(KF5Crash)
 
 %description
 KCharSelect is a tool to select special characters from all installed

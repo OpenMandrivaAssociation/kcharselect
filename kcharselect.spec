@@ -1,6 +1,6 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	 18.04.3
+Version:	18.07.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -22,6 +22,7 @@ fonts and copy them into the clipboard.
 %files -f %{name}.lang
 %{_bindir}/kcharselect
 %{_datadir}/applications/org.kde.kcharselect.desktop
+%{_datadir}/metainfo/org.kde.kcharselect.appdata.xml
 
 #----------------------------------------------------------------------
 

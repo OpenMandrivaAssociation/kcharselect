@@ -7,6 +7,7 @@ License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcharselect
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kcharselect-19.08.2-qt-5.14.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
@@ -27,7 +28,7 @@ fonts and copy them into the clipboard.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build

@@ -1,13 +1,12 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	19.08.3
+Version:	19.11.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcharselect
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kcharselect-19.08.2-qt-5.14.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)

@@ -1,12 +1,12 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcharselect
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
@@ -36,3 +36,6 @@ fonts and copy them into the clipboard.
 %install
 %ninja_install -C build
 %find_lang %{name} --with-html
+
+# FIXME workaround for gdb 8.3.1 hang
+strip --strip-unneeded %{buildroot}%{_bindir}/*

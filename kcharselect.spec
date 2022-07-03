@@ -1,7 +1,7 @@
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	22.04.1
-Release:	2
+Version:	22.04.2
+Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://utils.kde.org/projects/kcharselect

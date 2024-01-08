@@ -19,7 +19,7 @@ BuildRequires:	cmake(KF6Crash)
 KCharSelect is a tool to select special characters from all installed
 fonts and copy them into the clipboard.
 
-%files -f %{name}.lang
+%files -f kcharselect.lang
 %{_bindir}/kcharselect
 %{_datadir}/applications/org.kde.kcharselect.desktop
 %{_datadir}/metainfo/org.kde.kcharselect.appdata.xml
@@ -27,7 +27,7 @@ fonts and copy them into the clipboard.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kcharselect-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -37,4 +37,4 @@ fonts and copy them into the clipboard.
 
 %install
 %ninja_install -C build
-%find_lang %{name} --with-html
+%find_lang kcharselect --with-html

@@ -1,6 +1,6 @@
 Name:		plasma6-kcharselect
 Summary:	Select special characters from any font
-Version:	24.01.85
+Version:	24.01.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -27,7 +27,7 @@ fonts and copy them into the clipboard.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kcharselect-%{version}
+%autosetup -p1 -n kcharselect-%{?git:master}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja

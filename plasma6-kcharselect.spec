@@ -7,7 +7,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
-URL:		http://utils.kde.org/projects/kcharselect
+URL:		https://utils.kde.org/projects/kcharselect
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kcharselect/-/archive/%{gitbranch}/kcharselect-%{gitbranchd}.tar.bz2#/kcharselect-%{git}.tar.bz2

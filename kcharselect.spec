@@ -4,7 +4,7 @@ Version:	23.08.5
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
-URL:		http://utils.kde.org/projects/kcharselect
+URL:		https://utils.kde.org/projects/kcharselect
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)

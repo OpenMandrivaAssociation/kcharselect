@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		kcharselect
 Summary:	Select special characters from any font
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -22,26 +22,16 @@ BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6Bookmarks)
 BuildRequires:	cmake(KF6Crash)
 
+%rename plasma6-kcharselect
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 KCharSelect is a tool to select special characters from all installed
 fonts and copy them into the clipboard.
 
-%files -f kcharselect.lang
+%files -f %{name}.lang
 %{_bindir}/kcharselect
 %{_datadir}/applications/org.kde.kcharselect.desktop
 %{_datadir}/metainfo/org.kde.kcharselect.appdata.xml
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kcharselect-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kcharselect --with-html
